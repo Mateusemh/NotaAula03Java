@@ -1,0 +1,68 @@
+public class Animal {
+    float tamanho;
+    String cor;
+
+    void comer() {
+        System.out.println("Animal comendo");
+    }
+}
+
+public class Cavalo extends Animal {
+    String raca;
+
+    void fugir() {
+        System.out.println("Cavalo fugiu");
+    }
+}
+
+public class Leao extends Animal {
+    boolean juba;
+
+    void cacar() {
+        System.out.println("Leão caçando");
+    }
+}
+
+public class Medico {
+    boolean trabalhaNoHospital;
+
+    void tratarPaciente() {
+        System.out.println("Médico atendendo");
+    }
+}
+
+public class ClinicoGeral extends Medico {
+    boolean atendeEmCasa;
+
+    void receitar() {
+        System.out.println("Fazendo atendimento online");
+    }
+}
+
+// Cirurgiao.java
+public class Cirurgiao extends Medico {
+    void fazerIncisao() {
+        System.out.println("Incisão");
+    }
+}
+
+// Main.java
+public class Main {
+    public static void main(String[] args) {
+        Cavalo cavalo = new Cavalo();
+        cavalo.comer();
+        cavalo.fugir();
+
+        Leao leao = new Leao();
+        leao.comer();
+        leao.cacar();
+
+        ClinicoGeral clinico = new ClinicoGeral();
+        clinico.tratarPaciente();
+        clinico.receitar();
+
+        Cirurgiao cirurgiao = new Cirurgiao();
+        cirurgiao.tratarPaciente();
+        cirurgiao.fazerIncisao();
+    }
+}
